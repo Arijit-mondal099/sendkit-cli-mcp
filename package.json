@@ -15,10 +15,14 @@
     "format:check": "oxfmt . --check",
     "lint": "oxlint . --deny-warnings",
     "lint:fix": "oxlint . --fix",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepare": "husky"
   },
   "devDependencies": {
+    "@commitlint/cli": "^21.2.0",
+    "@commitlint/config-conventional": "^21.2.0",
     "@types/node": "^26.1.0",
+    "husky": "^9.1.7",
     "oxfmt": "^0.57.0",
     "oxlint": "^1.72.0",
     "tsdown": "^0.22.3",
