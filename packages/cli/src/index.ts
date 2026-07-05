@@ -38,9 +38,7 @@ function getTelegramBotToken() {
   return token;
 }
 
-program
-  .name("SendKit")
-  .description("SendKit CLI backed by sendkit-core");
+program.name("SendKit").description("SendKit CLI backed by sendkit-core");
 
 program
   .command("init")

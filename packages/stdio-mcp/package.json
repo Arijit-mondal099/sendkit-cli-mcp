@@ -9,8 +9,5 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",
     "sendkit-core": "workspace:*"
-  },
-  "devDependencies": {
-    "@types/node": "^26.1.0"
   }
 }

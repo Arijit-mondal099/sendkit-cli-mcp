@@ -12,8 +12,5 @@
     "@modelcontextprotocol/sdk": "^1.29.0",
     "hono": "^4.12.27",
     "sendkit-core": "workspace:*"
-  },
-  "devDependencies": {
-    "@types/node": "^26.1.0"
   }
 }

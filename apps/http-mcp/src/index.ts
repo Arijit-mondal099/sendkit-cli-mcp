@@ -22,20 +22,17 @@ function unauthorizedMcpResponse(c: Context, botToken: string) {
 /*
  * MCP authentication route
  */
-app.get(
-  ".well-known/oauth-protected-resource/:botToken/mcp",
-  async (c) => {
-    return c.json(
-      // This helper creates the OAuth metadata required by Clerk
-      generateClerkProtectedResourceMetadata({
-        publishableKey: clerkPublishableKey,
+app.get(".well-known/oauth-protected-resource/:botToken/mcp", async (c) => {
+  return c.json(
+    // This helper creates the OAuth metadata required by Clerk
+    generateClerkProtectedResourceMetadata({
+      publishableKey: clerkPublishableKey!,
 
-        // We create a new URL, keep the same origin from c.req.url, and replace the entire path with the first argument (/${botToken}/mcp) because it starts with /
-        resourceUrl: new URL(`/${c.req.param("botToken")}/mcp`, c.req.url).toString(),
-      }),
-    );
-  },
-);
+      // We create a new URL, keep the same origin from c.req.url, and replace the entire path with the first argument (/${botToken}/mcp) because it starts with /
+      resourceUrl: new URL(`/${c.req.param("botToken")}/mcp`, c.req.url).toString(),
+    }),
+  );
+});
 
 app.post("/:botToken/mcp", async (c) => {
   const botToken = c.req.param("botToken");
@@ -69,6 +66,7 @@ app.post("/:botToken/mcp", async (c) => {
   try {
     return await transport.handleRequest(c.req.raw);
   } catch (error) {
+    console.error("MCP transport request handling failed:", error);
     await server.close();
   }
 });
