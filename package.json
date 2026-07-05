@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "cli:dev": "bun run packages/cli/src/index.ts"
+    "cli:dev": "bun run packages/cli/src/index.ts",
+    "stdio-mcp:dev": "bun run packages/stdio-mcp/src/index.ts"
   },
   "workspaces": ["packages/*"]
 }

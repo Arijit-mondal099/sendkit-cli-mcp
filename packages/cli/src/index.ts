@@ -11,7 +11,7 @@ program
   .argument("<chatId>", "Telegram chat id")
   .argument("<message>", "Telegram message to send")
   .action(async (chatId: string, message: string) => {
-    const token = process.env.TELEGRAM_BOT_KEY;
+    const token = process.env.TELEGRAM_BOT_TOKEN;
 
     if (!token) {
       console.error("Oops telegram bot secret key is not provided!");
