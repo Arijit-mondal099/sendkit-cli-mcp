@@ -5,6 +5,18 @@
     "": {
       "name": "sendkit-workspace",
     },
+    "apps/http-mcp": {
+      "name": "sendkit-http-mcp",
+      "version": "0.0.0",
+      "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.29.0",
+        "hono": "^4.12.27",
+        "sendkit-core": "workspace:*",
+      },
+      "devDependencies": {
+        "@types/node": "^26.1.0",
+      },
+    },
     "packages/cli": {
       "name": "sendkit-cli",
       "version": "0.0.0",
@@ -29,7 +41,6 @@
       "dependencies": {
         "@modelcontextprotocol/sdk": "^1.29.0",
         "sendkit-core": "workspace:*",
-        "zod": "^4.4.3",
       },
       "devDependencies": {
         "@types/node": "^26.1.0",
@@ -192,6 +203,8 @@
     "sendkit-cli": ["sendkit-cli@workspace:packages/cli"],
 
     "sendkit-core": ["sendkit-core@workspace:packages/core"],
+
+    "sendkit-http-mcp": ["sendkit-http-mcp@workspace:apps/http-mcp"],
 
     "sendkit-stdio-mcp": ["sendkit-stdio-mcp@workspace:packages/stdio-mcp"],
 

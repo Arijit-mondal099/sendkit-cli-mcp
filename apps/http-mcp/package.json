@@ -1,5 +1,5 @@
 {
-  "name": "sendkit-stdio-mcp",
+  "name": "sendkit-http-mcp",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",
+    "hono": "^4.12.27",
     "sendkit-core": "workspace:*"
   },
   "devDependencies": {
