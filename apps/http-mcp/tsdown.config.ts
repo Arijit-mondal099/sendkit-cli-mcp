@@ -12,7 +12,6 @@ export default defineConfig({
   outExtensions: () => ({ js: ".js", dts: ".d.ts" }),
   deps: {
     neverBundle: [
-      "@sendkit-cli-mcp/core", 
       "@modelcontextprotocol/sdk", 
       "hono",
       "@clerk/mcp-tools",
