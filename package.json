@@ -14,7 +14,6 @@
     "build:core": "bun run --filter @sendkit-cli-mcp/core build",
     "build:cli": "bun run --filter @sendkit-cli-mcp/cli build",
     "build:stdio-mcp": "bun run --filter @sendkit-cli-mcp/stdio-mcp build",
-    "build:http-mcp": "bun run --filter @sendkit-http-mcp build",
     "release:pack:core": "bun run --filter @sendkit-cli-mcp/core pack:dry",
     "release:pack:cli": "bun run --filter @sendkit-cli-mcp/cli pack:dry",
     "release:pack:stdio-mcp": "bun run --filter @sendkit-cli-mcp/stdio-mcp pack:dry",
