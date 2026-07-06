@@ -1,10 +1,15 @@
 {
-  "name": "sendkit-core",
+  "name": "@sendkit-cli-mcp/core",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "exports": {
     ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "pack:dry": "bun run build && bun pm pack --dry-run",
+    "prepublishOnly": "bun run build"
   },
   "dependencies": {
     "zod": "^4.4.3"

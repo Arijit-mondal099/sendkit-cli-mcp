@@ -1,11 +1,16 @@
 {
-  "name": "sendkit-cli",
+  "name": "@sendkit-cli-mcp/cli",
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "scripts": {
+    "build": "tsdown",
+    "pack:dry": "bun run build && bun pm pack --dry-run",
+    "prepublishOnly": "bun run build"
+  },
   "dependencies": {
+    "@sendkit-cli-mcp/core": "workspace:*",
     "commander": "^15.0.0",
-    "sendkit-core": "workspace:*",
     "zod": "^4.4.3"
   }
 }
