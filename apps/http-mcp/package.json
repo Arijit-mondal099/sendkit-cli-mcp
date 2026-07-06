@@ -1,16 +1,28 @@
 {
-  "name": "sendkit-http-mcp",
+  "name": "@sendkit-http-mcp",
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.js",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "bun run src/index.ts",
+    "start": "bun ./dist/index.js"
   },
   "dependencies": {
     "@clerk/backend": "^3.10.0",
     "@clerk/mcp-tools": "^0.5.0",
     "@modelcontextprotocol/sdk": "^1.29.0",
     "@sendkit-cli-mcp/core": "workspace:*",
+    "dotenv": "^17.4.2",
     "hono": "^4.12.27"
   }
 }

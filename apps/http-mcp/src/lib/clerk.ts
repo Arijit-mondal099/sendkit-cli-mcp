@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config({ path: "../../.env" });
+
 import { createClerkClient } from "@clerk/backend";
 
 export const clerkPublishableKey = process.env.CLERK_PUBLISHABLE_KEY;

@@ -1,8 +1,25 @@
 {
   "name": "@sendkit-cli-mcp/cli",
   "version": "0.0.0",
-  "private": true,
   "type": "module",
+  "bin": {
+    "sendkit": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsdown",
     "pack:dry": "bun run build && bun pm pack --dry-run",

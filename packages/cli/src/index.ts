@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { Command } from "commander";
 import { sendTelegramMessage } from "@sendkit-cli-mcp/core";
 import { z } from "zod";

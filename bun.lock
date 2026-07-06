@@ -16,13 +16,14 @@
       },
     },
     "apps/http-mcp": {
-      "name": "sendkit-http-mcp",
+      "name": "@sendkit-http-mcp",
       "version": "0.0.0",
       "dependencies": {
         "@clerk/backend": "^3.10.0",
         "@clerk/mcp-tools": "^0.5.0",
         "@modelcontextprotocol/sdk": "^1.29.0",
         "@sendkit-cli-mcp/core": "workspace:*",
+        "dotenv": "^17.4.2",
         "hono": "^4.12.27",
       },
     },
@@ -44,7 +45,7 @@
     },
     "packages/stdio-mcp": {
       "name": "@sendkit-cli-mcp/stdio-mcp",
-      "version": "0.0.0",
+      "version": "0.0.1",
       "dependencies": {
         "@modelcontextprotocol/sdk": "^1.29.0",
         "@sendkit-cli-mcp/core": "workspace:*",
@@ -246,6 +247,8 @@
 
     "@sendkit-cli-mcp/stdio-mcp": ["@sendkit-cli-mcp/stdio-mcp@workspace:packages/stdio-mcp"],
 
+    "@sendkit-http-mcp": ["@sendkit-http-mcp@workspace:apps/http-mcp"],
+
     "@simple-libs/child-process-utils": ["@simple-libs/child-process-utils@1.0.2", "", { "dependencies": { "@simple-libs/stream-utils": "^1.2.0" } }, "sha512-/4R8QKnd/8agJynkNdJmNw2MBxuFTRcNFnE5Sg/G+jkSsV8/UBgULMzhizWWW42p8L5H7flImV2ATi79Ove2Tw=="],
 
     "@simple-libs/stream-utils": ["@simple-libs/stream-utils@2.0.0", "", {}, "sha512-fCTuZK4QBa+39Oz9l4OGfJfz+GpwCp3AqO7Zch3to99xHPgstVsRFpeQ8LNd2o1Gv8raL2mCFwiaHh7bFSp5DQ=="],
@@ -325,6 +328,8 @@
     "depd": ["depd@2.0.0", "", {}, "sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw=="],
 
     "dequal": ["dequal@2.0.3", "", {}, "sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA=="],
+
+    "dotenv": ["dotenv@17.4.2", "", {}, "sha512-nI4U3TottKAcAD9LLud4Cb7b2QztQMUEfHbvhTH09bqXTxnSie8WnjPALV/WMCrJZ6UV/qHJ6L03OqO3LcdYZw=="],
 
     "dts-resolver": ["dts-resolver@3.0.0", "", { "peerDependencies": { "oxc-resolver": ">=11.0.0" }, "optionalPeers": ["oxc-resolver"] }, "sha512-1T1f+z+4tl9XD+m+0HBgWoL/nm0bOIffyWaUuUSBlFg/86IWvfx+wjNaO/ybU0AJzG9/Mi5hBUgGV6zCmWEN7Q=="],
 
@@ -529,8 +534,6 @@
     "semver": ["semver@7.8.5", "", { "bin": { "semver": "bin/semver.js" } }, "sha512-Y7/KDsb8LjooZpwaqGyulO6DQlksgCncchHGk+sZIY4SBvUocMBEFH5Ur1fI4dV+Jvl0w6cjvucaIi40puRioA=="],
 
     "send": ["send@1.2.1", "", { "dependencies": { "debug": "^4.4.3", "encodeurl": "^2.0.0", "escape-html": "^1.0.3", "etag": "^1.8.1", "fresh": "^2.0.0", "http-errors": "^2.0.1", "mime-types": "^3.0.2", "ms": "^2.1.3", "on-finished": "^2.4.1", "range-parser": "^1.2.1", "statuses": "^2.0.2" } }, "sha512-1gnZf7DFcoIcajTjTwjwuDjzuz4PPcY2StKPlsGAQ1+YH20IRVrBaXSWmdjowTJ6u8Rc01PoYOGHXfP1mYcZNQ=="],
-
-    "sendkit-http-mcp": ["sendkit-http-mcp@workspace:apps/http-mcp"],
 
     "serve-static": ["serve-static@2.2.1", "", { "dependencies": { "encodeurl": "^2.0.0", "escape-html": "^1.0.3", "parseurl": "^1.3.3", "send": "^1.2.0" } }, "sha512-xRXBn0pPqQTVQiC8wyQrKs2MOlX24zQ0POGaj0kultvoOCstBQM5yvOhAVSUwOMjQtTvsPWoNCHfPGwaaQJhTw=="],
 
