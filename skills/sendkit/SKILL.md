@@ -1,6 +1,11 @@
 ﻿---
 name: sendkit
-description: Send Telegram messages from an agent through the SendKit MCP `telegram` tool, with the SendKit CLI (`@sendkit-cli-mcp/cli`) as a fallback. Use when a user asks to send a Telegram message, mentions SendKit, wants to interact with the SendKit toolset, asks to verify SendKit manually, or needs to choose between the SendKit MCP and CLI workflows.
+description: >-
+  Send Telegram messages from an agent through the SendKit MCP `telegram`
+  tool, with the SendKit CLI (`@sendkit-cli-mcp/cli`) as a fallback. Use when
+  a user asks to send a Telegram message, mentions SendKit, wants to
+  interact with the SendKit toolset, asks to verify SendKit manually, or
+  needs to choose between the SendKit MCP and CLI workflows.
 ---
 
 # SendKit
@@ -31,8 +36,6 @@ Call the `telegram` tool on the `sendkit` MCP server with:
 | `message` | string | yes | Message text (non-empty) |
 
 The bot token is read from `TELEGRAM_BOT_TOKEN` in the MCP server environment (see `.mcp.json`) - do not pass it in the tool input. On success the tool returns `{ ok: true, chatId, messageId }`.
-
-**Remote MCP server:** `https://attractive-perception-production.up.railway.app/<TELEGRAM_BOT_TOKEN>/mcp` (base URL: `https://attractive-perception-production.up.railway.app`)
 
 ## CLI workflow (fallback)
 
