@@ -1,4 +1,4 @@
-﻿---
+---
 name: sendkit
 description: >-
   Send Telegram messages from an agent through the SendKit MCP `telegram`
